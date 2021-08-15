@@ -1,6 +1,6 @@
-import 'package:exam_halls/screens/classrooms.dart';
-import 'package:exam_halls/screens/search.dart';
-import 'package:exam_halls/screens/student_dash.dart';
+import 'package:exam_halls/screens/student/classrooms/classrooms.dart';
+import 'package:exam_halls/screens/student/search.dart';
+import 'package:exam_halls/screens/student/student_dash.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

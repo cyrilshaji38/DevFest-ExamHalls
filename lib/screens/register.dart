@@ -1,4 +1,4 @@
-import 'package:exam_halls/screens/student_dash.dart';
+import 'package:exam_halls/screens/student/student_dash.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 

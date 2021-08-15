@@ -1,5 +1,5 @@
 import 'package:exam_halls/screens/login.dart';
-import 'package:exam_halls/screens/student_drawer.dart';
+import 'package:exam_halls/screens/student/student_drawer.dart';
 import 'package:flutter/material.dart';
 
 class StudentDash extends StatefulWidget {

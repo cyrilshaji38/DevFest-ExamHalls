@@ -1,4 +1,4 @@
-import 'package:exam_halls/screens/institute_drawer.dart';
+import 'package:exam_halls/screens/institute/institute_drawer.dart';
 import 'package:exam_halls/screens/login.dart';
 import 'package:flutter/material.dart';
 

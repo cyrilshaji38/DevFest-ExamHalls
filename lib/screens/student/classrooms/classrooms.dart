@@ -1,6 +1,10 @@
-import 'package:exam_halls/screens/student_drawer.dart';
+import 'package:exam_halls/screens/student/classrooms/S6_ECE_EMI.dart';
+import 'package:exam_halls/screens/student/classrooms/S6_ECE_ITC.dart';
+import 'package:exam_halls/screens/student/student_drawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'S6_ECE_MTD.dart';
 
 class ClassroomsPage extends StatefulWidget {
   const ClassroomsPage({Key key}) : super(key: key);
@@ -23,7 +27,7 @@ class _ClassroomsPageState extends State<ClassroomsPage> {
               height: 100,
               child: TextButton(
                   child: Text("S6-ECE: Electronic Measurements and Instrumentation"),
-                  onPressed: ()=>{},
+                  onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => EMI()));},
                   style: TextButton.styleFrom(
                     primary: Colors.white,
                     backgroundColor: Colors.purple,
@@ -37,7 +41,7 @@ class _ClassroomsPageState extends State<ClassroomsPage> {
               height: 100,
               child: TextButton(
                   child: Text("S6-ECE: Information Theory and Coding"),
-                  onPressed: ()=>{},
+                  onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => ITC()));},
                   style: TextButton.styleFrom(
                       primary: Colors.white,
                       backgroundColor: Colors.purple,
@@ -51,7 +55,7 @@ class _ClassroomsPageState extends State<ClassroomsPage> {
               height: 100,
               child: TextButton(
                   child: Text("S6-ECE: Microwave Theory and Techniques"),
-                  onPressed: ()=>{},
+                  onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => MTD()));},
                   style: TextButton.styleFrom(
                       primary: Colors.white,
                       backgroundColor: Colors.purple,
