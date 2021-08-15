@@ -1,5 +1,7 @@
 # Exam Hall Booking App
 
+A platform to help educational institutions to conduct their exams in multiple centers so that students can avoid traveling long distances.
+
 ## The Problem it Solves
 
 With the Covid 19 pandemic, educational institutions have been shut down and classes are being continued online. Online exams have proven to be ineffective due to lack of proper invigilation. As a result, institutions are forced to call their students to the campus to conduct offline exams. Some students have to travel over long distances to reach their campus. This is risky to both the student as well as the people they come in contact with.
