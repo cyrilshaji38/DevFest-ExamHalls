@@ -5,7 +5,7 @@ A platform to help educational institutions to conduct their exams in multiple c
 ## Team members
 
 1. Cyril Shaji [https://github.com/cyrilshaji38]
-2. Nikita Mathew [https://github.com/chandnisuresh17]
+2. Chandni Suresh [https://github.com/chandnisuresh17]
 
 ## Link to product walkthrough
 
