@@ -2,37 +2,41 @@
 
 A platform to help educational institutions to conduct their exams in multiple centers so that students can avoid traveling long distances.
 
-## The Problem it Solves
+## Team members
 
-With the Covid 19 pandemic, educational institutions have been shut down and classes are being continued online. Online exams have proven to be ineffective due to lack of proper invigilation. As a result, institutions are forced to call their students to the campus to conduct offline exams. Some students have to travel over long distances to reach their campus. This is risky to both the student as well as the people they come in contact with.
+1. Cyril Shaji [https://github.com/cyrilshaji38]
+2. Nikita Mathew [https://github.com/chandnisuresh17]
 
-There are several pandemic related issues faced by students that dont live close to their campus, all leading to a greater risk of exposure:
-1) They have to travel long distances over public transport.
-2) They have to stay in crowded dorms.
-3) They have to dine outside.
-4) Social distancing becomes nearly impossible.
-5) Campus becomes overpopulated during exam seasons.
-6) Long distance travelers have to undergo self isolation.
-7) Lot of additional expenses.
+## Link to product walkthrough
 
-Some institutions have tried conducting online exams and have faced the following challenges:
-1) Network issues.
-2) Proper invigilation.
-3) Increased expenses for students.
-4) Malpractices.
+.
 
-## Our Solution
+## How it Works ?
 
-We are developing an app that can be used by educational institutions to conduct their exams at various centers across the country so that students can write their exams from near their homes. These are the main features of our app:
-1) Separate logins for students and institutions.
-2) Students can book seats at nearby institutions over the internet.
-3) Automated seat booking system.
-4) Online payments.
-5) Search for institutions based on location.
+1. Institutes and Students can make an account.
+2. Institutes offer exam hall seats at a fixed rate. They can also use their account to hold their own examinations and upload their question papers to classrooms.
+3. Students can use the search page to look for exam halls nearby and book a seat for their examinations. During an examination the student must reach the exam hall where their attendence will be taken and they can write their whole test with the help of the classrooms page. Everything can be done within the app and the device will be proctored to prevent malpractices.
 
-Students are required to take their phone with them and with the following features of our app they can write their exam:
-1) Classroom system to upload question and answer papers. (Similar to Google Classroom)
-2) Timed submissions.
-3) App switching detection to prevent malpractices on phone.
-4) Photo to PDF converter to upload answer papers.
-5) Location based check-in to confirm student is at booked exam hall.
+## Libraries used
+
+flutter_genius_scan: ^4.0.10
+
+firebase_auth: ^3.0.1
+
+firebase_core: ^1.4.0
+
+cloud_firestore: ^2.4.0
+
+## How to configure
+
+1. Setup Flutter: https://flutter.dev/docs/get-started/install
+2. Import our project
+3. Setup Firebase for the app: https://console.firebase.google.com.
+4. Go to the Firebase Console for your new instance. Click "Authentication" in the left-hand menu. Click the "sign-in method" tab. Click "Email/Password" and enable it.
+   Go to the Firebase Console. Click "Firestore Database" in the left-hand menu. Click the "Create Database" button. It will prompt you to set up, rules, choose test mode, for now.
+   On the next screen select any of the locations you prefer. In the Firebase console, in the settings of your Android app, add your SHA-1 key by clicking "Add Fingerprint". Download google-services.json and place google-services.json into /android/app/.
+
+## How to Run
+1. Download the apk: 
+2. Install it on an android phone or on this online android emulator: https://www.apkonline.net/runapk/create-androidapk.html?app=android_6.0_blank
+3. Enjoy
