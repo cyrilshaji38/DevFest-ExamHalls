@@ -2,14 +2,19 @@
 
 A platform to help educational institutions to conduct their exams in multiple centers so that students can avoid traveling long distances.
 
-## Team members
+## Team Dart
 
 1. Cyril Shaji [https://github.com/cyrilshaji38]
 2. Chandni Suresh [https://github.com/chandnisuresh17]
 
-## Link to product walkthrough
+## Presentation
 
-.
+Approach Doc: [https://docs.google.com/presentation/d/1SiQXPIyIxH7jiMplklv4elrkYTw8_xW-/edit?usp=sharing&ouid=100420225934010816363&rtpof=true&sd=true]
+Video: [https://www.youtube.com/watch?v=K9DjewCr3OM&ab_channel=CyrilShaji]
+
+## Link to product demo
+
+[https://www.youtube.com/watch?v=PTPNuwjAdy0&ab_channel=CyrilShaji]
 
 ## How it Works ?
 
@@ -37,6 +42,18 @@ cloud_firestore: ^2.4.0
    On the next screen select any of the locations you prefer. In the Firebase console, in the settings of your Android app, add your SHA-1 key by clicking "Add Fingerprint". Download google-services.json and place google-services.json into /android/app/.
 
 ## How to Run
-1. Download the apk: 
+1. Download the apk: https://github.com/cyrilshaji38/DevFest-ExamHalls/blob/main/ExamHall.apk 
 2. Install it on an android phone or on this online android emulator: https://www.apkonline.net/runapk/create-androidapk.html?app=android_6.0_blank
-3. Enjoy
+3. You can register a new account or use the following credentials to view all the features of our app:
+
+   Institute Account email:
+
+        cusat@gmail.com
+
+   Student Account email:
+
+        cyrilshaji38@gmail.com
+
+   Password:
+
+        123456
