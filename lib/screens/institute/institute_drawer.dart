@@ -1,5 +1,7 @@
+import 'package:exam_halls/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'institute_applications.dart';
 import 'institute_dash.dart';
 
 class InstituteDrawer extends StatefulWidget {
@@ -12,7 +14,12 @@ class InstituteDrawer extends StatefulWidget {
 class _InstituteDrawerState extends State<InstituteDrawer> {
 
   void dash(){
-    Navigator.push(context, MaterialPageRoute(builder: (context) => InstituteDash()));
+    String uid = auth.currentUser.uid;
+    Navigator.push(context, MaterialPageRoute(builder: (context) => InstituteDash(uid)));
+  }
+
+  void applications(){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => ApplicationsPage()));
   }
 
   @override
@@ -24,6 +31,20 @@ class _InstituteDrawerState extends State<InstituteDrawer> {
         child: TextButton(
             child: Text("Dashboard"),
             onPressed: this.dash,
+            style: TextButton.styleFrom(
+                primary: Colors.white,
+                backgroundColor: Colors.purple,
+                textStyle: TextStyle(color: Colors.white, fontSize: 30,),
+                minimumSize: Size(40,20)
+            )
+        ),
+      ),
+      Text("\n"),
+      SizedBox(
+        width: 300,
+        child: TextButton(
+            child: Text("Seat Applications"),
+            onPressed: this.applications,
             style: TextButton.styleFrom(
                 primary: Colors.white,
                 backgroundColor: Colors.purple,

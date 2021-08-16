@@ -31,6 +31,9 @@ dependencies:
   fluttertoast: ^8.0.8
   open_file: ^3.2.1
   flutter_genius_scan: ^4.0.10
+  firebase_auth: ^3.0.1
+  firebase_core: ^1.4.0
+  cloud_firestore: ^2.4.0
 
 dev_dependencies:
   flutter_test:

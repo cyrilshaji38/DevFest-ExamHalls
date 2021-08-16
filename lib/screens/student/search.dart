@@ -1,3 +1,4 @@
+import 'package:exam_halls/screens/institute/institute_wall.dart';
 import 'package:exam_halls/screens/student/student_drawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,9 @@ class SearchPage extends StatefulWidget {
 }
 
 class _SearchPageState extends State<SearchPage> {
+
+  String uid_cusat = "S6lyT1XiKmhRqC2JLwW4C3LiQxf1", uid_tec = "Diops5YDxbWK6opGkBQJ6dY4Fx33";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +29,7 @@ class _SearchPageState extends State<SearchPage> {
               width: 350,
               child: TextButton(
                   child: Text("682022: School of Engineering, CUSAT"),
-                  onPressed: (){},
+                  onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => InstituteWall(uid_cusat)));},
                   style: TextButton.styleFrom(
                       primary: Colors.black,
                       backgroundColor: Colors.grey,
@@ -37,7 +41,7 @@ class _SearchPageState extends State<SearchPage> {
               width: 350,
               child: TextButton(
                   child: Text("680009: Thrissur Engineering College"),
-                  onPressed: (){},
+                  onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => InstituteWall(uid_tec)));},
                   style: TextButton.styleFrom(
                       primary: Colors.black,
                       backgroundColor: Colors.grey,

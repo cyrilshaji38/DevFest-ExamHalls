@@ -1,8 +1,11 @@
 import 'package:exam_halls/screens/student/classrooms/classrooms.dart';
+import 'package:exam_halls/screens/student/payments.dart';
 import 'package:exam_halls/screens/student/search.dart';
 import 'package:exam_halls/screens/student/student_dash.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../../main.dart';
 
 class StudentDrawer extends StatefulWidget {
   const StudentDrawer({Key key}) : super(key: key);
@@ -14,7 +17,8 @@ class StudentDrawer extends StatefulWidget {
 class _StudentDrawerState extends State<StudentDrawer> {
 
   void dash(){
-    Navigator.push(context, MaterialPageRoute(builder: (context) => StudentDash()));
+    String uid = auth.currentUser.uid;
+    Navigator.push(context, MaterialPageRoute(builder: (context) => StudentDash(uid)));
   }
 
   void search(){
@@ -23,6 +27,10 @@ class _StudentDrawerState extends State<StudentDrawer> {
 
   void classrooms(){
     Navigator.push(context, MaterialPageRoute(builder: (context) => ClassroomsPage()));
+  }
+
+  void payments(){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentsPage()));
   }
 
   @override
@@ -61,6 +69,19 @@ class _StudentDrawerState extends State<StudentDrawer> {
         child: TextButton(
             child: Text("Classrooms"),
             onPressed: this.classrooms,
+            style: TextButton.styleFrom(
+                primary: Colors.white,
+                backgroundColor: Colors.purple,
+                textStyle: TextStyle(color: Colors.white, fontSize: 30,)
+            )
+        ),
+      ),
+      Text("\n"),
+      SizedBox(
+        width: 300,
+        child: TextButton(
+            child: Text("Payments"),
+            onPressed: this.payments,
             style: TextButton.styleFrom(
                 primary: Colors.white,
                 backgroundColor: Colors.purple,

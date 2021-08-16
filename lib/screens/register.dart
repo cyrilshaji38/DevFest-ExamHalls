@@ -1,9 +1,10 @@
+import 'package:exam_halls/models/database.dart';
+import 'package:exam_halls/screens/institute/institute_dash.dart';
 import 'package:exam_halls/screens/student/student_dash.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-
-String name, email, mobile, pincode, password, college, degree, dept, sem, reg;
-int acctype=0;
+import '../main.dart';
 
 class Register extends StatefulWidget {
   const Register({Key key}) : super(key: key);
@@ -13,6 +14,9 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+
+  String name, email, mobile, pincode, password, college="", degree="", dept="", sem="", reg="";
+  int acctype=0;
 
   @override
   void initState(){
@@ -38,8 +42,13 @@ class _RegisterState extends State<Register> {
     );
   }
 
-  void register(){
-    Navigator.push(context, MaterialPageRoute(builder: (context) => StudentDash()));
+  void createacc(){
+    String uid = auth.currentUser.uid;
+    addUser(name, email, mobile, pincode, acctype, college, degree, dept, sem, reg, uid);
+    if(acctype==1)
+      Navigator.push(context, MaterialPageRoute(builder: (context) => StudentDash(uid)));
+    else if(acctype==2)
+      Navigator.push(context, MaterialPageRoute(builder: (context) => InstituteDash(uid)));
   }
 
   @override
@@ -93,42 +102,39 @@ class _RegisterState extends State<Register> {
                         fontSize: 30,
                       )
                   ),
-                  onPressed: this.register
-                  // () async{
-                  //   if(acctype==0)
-                  //     valuecheck();
-                  //   else
-                  //     try {
-                  //       await auth.createUserWithEmailAndPassword(email: email, password: password);
-                  //       this.createacc();
-                  //     } on FirebaseAuthException catch (e) {
-                  //       if (e.code == 'weak-password') {
-                  //         print('The password provided is too weak.');
-                  //         Fluttertoast.showToast(
-                  //             msg: "The password provided is too weak.",
-                  //             toastLength: Toast.LENGTH_SHORT,
-                  //             gravity: ToastGravity.CENTER,
-                  //             timeInSecForIosWeb: 1,
-                  //             backgroundColor: Colors.red,
-                  //             textColor: Colors.white,
-                  //             fontSize: 16.0
-                  //         );
-                  //       } else if (e.code == 'email-already-in-use') {
-                  //         print('The account already exists for that email.');
-                  //         Fluttertoast.showToast(
-                  //             msg: "The account already exists for that email.",
-                  //             toastLength: Toast.LENGTH_SHORT,
-                  //             gravity: ToastGravity.CENTER,
-                  //             timeInSecForIosWeb: 1,
-                  //             backgroundColor: Colors.red,
-                  //             textColor: Colors.white,
-                  //             fontSize: 16.0
-                  //         );
-                  //       }
-                  //     } catch (e) {
-                  //       print(e);
-                  //     }
-                  // }
+                  onPressed: () async{
+                    if(acctype==0)
+                      valuecheck();
+                    else
+                      try {
+                        await auth.createUserWithEmailAndPassword(email: email, password: password);
+                        this.createacc();
+                      } on FirebaseAuthException catch (e) {
+                        if (e.code == 'weak-password') {
+                          print('The password provided is too weak.');
+                          Fluttertoast.showToast(
+                              msg: "The password provided is too weak.",
+                              toastLength: Toast.LENGTH_SHORT,
+                              gravity: ToastGravity.CENTER,
+                              timeInSecForIosWeb: 1,
+                              backgroundColor: Colors.red,
+                              textColor: Colors.white,
+                              fontSize: 16.0
+                          );
+                        } else if (e.code == 'email-already-in-use') {
+                          print('The account already exists for that email.');
+                          Fluttertoast.showToast(
+                              msg: "The account already exists for that email.",
+                              toastLength: Toast.LENGTH_SHORT,
+                              gravity: ToastGravity.CENTER,
+                              timeInSecForIosWeb: 1,
+                              backgroundColor: Colors.red,
+                              textColor: Colors.white,
+                              fontSize: 16.0
+                          );
+                        }
+                    } catch (e) {print(e);}
+                  }
               ),
               Text("\n\n\n")
             ]

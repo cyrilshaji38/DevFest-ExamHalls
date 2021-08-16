@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "675354912886",
+    "project_id": "examhall-3fd99",
+    "storage_bucket": "examhall-3fd99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675354912886:android:20ec6f8c55f6ee5f429757",
+        "android_client_info": {
+          "package_name": "com.example.exam_halls"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675354912886-rgj1mf1jad1nttgki9vc0npgvoan12ai.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.exam_halls",
+            "certificate_hash": "9b62eba75521e623105101bc5feb498f5eaff54b"
+          }
+        },
+        {
+          "client_id": "675354912886-dvlchrdh5r6l1th6ck0c46mgbi4ra7ft.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAI5dqGoSz-mdkaKs5zmlRBE44rJuTgHuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "675354912886-dvlchrdh5r6l1th6ck0c46mgbi4ra7ft.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
