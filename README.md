@@ -1,4 +1,4 @@
-# Exam Hall Booking App
+# eHalls
 
 A platform to help educational institutions to conduct their exams in multiple centers so that students can avoid traveling long distances.
 
