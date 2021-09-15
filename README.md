@@ -43,7 +43,7 @@ cloud_firestore: ^2.4.0
    On the next screen select any of the locations you prefer. In the Firebase console, in the settings of your Android app, add your SHA-1 key by clicking "Add Fingerprint". Download google-services.json and place google-services.json into /android/app/.
 
 ## How to Run
-1. Download the apk: https://github.com/cyrilshaji38/DevFest-ExamHalls/blob/main/ExamHall.apk 
+1. Download the apk: https://github.com/cyrilshaji38/DevFest-ExamHalls/blob/main/eHalls.apk
 2. Install it on an android phone or on this online android emulator: https://www.apkonline.net/runapk/create-androidapk.html?app=android_6.0_blank
 3. You can register a new account or use the following credentials to view all the features of our app:
 
